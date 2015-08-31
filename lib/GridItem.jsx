@@ -144,7 +144,7 @@ var GridItem = React.createClass({
   calcWH({height, width}) {
     width = width + this.props.margin[0];
     height = height + this.props.margin[1];
-    var w = Math.round((width / this.props.containerWidth) * this.props.cols);
+    var w = Math.floor((width / this.props.containerWidth) * this.props.cols);
     var h = Math.round(height / this.props.rowHeight);
     w = Math.max(Math.min(w, this.props.cols - this.props.x), 0);
     h = Math.max(h, 0);
